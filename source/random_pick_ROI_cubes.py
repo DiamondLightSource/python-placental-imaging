@@ -35,7 +35,6 @@ if method == 'to_pick':
       selected_file_num = selected_file    
 
   
-#raise SystemExit
 #to drop every nth file  
 if method == 'to_drop':      
   selected_file = np.delete(filenum, np.arange(0, filenum.size, nth))

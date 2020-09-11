@@ -1,1 +1,1 @@
-To calculate unercertaintly matric of placental tissue using systemic random sampling
+To calculate uncertainty quantification and scale-dependence of morhological metrics.

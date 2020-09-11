@@ -1,24 +1,19 @@
 # -*- coding: utf-8 -*-
-import timeit
 
-start = timeit.default_timer()
+import timeit
 from skimage import io
-from PIL import Image
-from scipy.misc import imsave
-import matplotlib.pyplot as plt
 import numpy as np
 import os
 import os.path
-import h5py
-import os
 import random
+start = timeit.default_timer()
+
+im = io.imread('specimen1_data/data3_halfbinned_750vol.tif')
 
 
-im = io.imread('specimen1_data/data3_halfbinned_750vol.tif')#######
-
-grid_type = 'cover_all' #'not_cover_all' ###########
-NumOfImg =3#plus one of number of cubes in 1D ##########
-z_thickness = 150 ##########
+grid_type = 'cover_all' #'not_cover_all' 
+NumOfImg =3#plus one of number of cubes in 1D 
+z_thickness = 150 
 
 if grid_type == 'cover_all':
     SizeOfVol = 750
@@ -41,7 +36,7 @@ zloop=np.linspace(0,750,(750/z_thickness)+1,dtype=int)
 w = xloop[1]-xloop[0] # width
 h = w # height
 d = z_thickness # depth
-save_path = "z_fixed_sampling/sample_123761/z_150/crop_img_"+str(w) ########
+save_path = "z_fixed_sampling/sample_123761/z_150/crop_img_"+str(w) 
 
 
 try:
