@@ -1,0 +1,5 @@
+skimage
+numpy
+os
+random
+shutil
